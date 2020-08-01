@@ -644,7 +644,7 @@ addToDone("Exercise 39 is correct.")
 // Exercise 40
 // Write a function definition named areaOfRectangle that takes in two numbers and returns the product.
 function areaOfRectangle(a,b){
-    return(a*b);
+    return (a*b);
 }
 assert(areaOfRectangle(1, 3), 3, "Exercise 40");
 assert(areaOfRectangle(5, 2), 10, "Exercise 40");
@@ -656,7 +656,9 @@ addToDone("Exercise 40 is correct.")
 
 // Exercise 41
 // Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
-
+function areaOfCircle(r){
+    return Math.PI*r*r;
+}
 
 assert(areaOfCircle(3), 28.274333882308138, "Exercise 41");
 assert(areaOfCircle(5), 78.53981633974483, "Exercise 41");
@@ -666,7 +668,9 @@ addToDone("Exercise 41 is correct.")
 
 // Exercise 42
 // Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
-
+function circumference(r){
+    return 2*Math.PI*r;
+}
 assert(circumference(3), 18.84955592153876, "Exercise 42");
 assert(circumference(5), 31.41592653589793, "Exercise 42");
 assert(circumference(7), 43.982297150257104, "Exercise 42");
@@ -676,6 +680,7 @@ addToDone("Exercise 42 is correct.")
 
 // Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
+
 
 assert(isVowel("a"), true, "Exercise 43");
 assert(isVowel("U"), true, "Exercise 43");
