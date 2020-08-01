@@ -1,5 +1,5 @@
 * {
-    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans;
+    font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, serif;
     box-sizing: border-box;
 }
 
@@ -14,8 +14,8 @@ header {
 main {
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
     margin: 1em;
 }
 
