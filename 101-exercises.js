@@ -677,10 +677,15 @@ assert(circumference(7), 43.982297150257104, "Exercise 42");
 addToDone("Exercise 42 is correct.")
 
 
-
 // Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
-
+function isVowel (value) {
+    if (value='a'|| 'e' || 'i' ||'o' ||'u'){
+        return "true";
+    } else {
+        return "false";
+    }
+}
 
 assert(isVowel("a"), true, "Exercise 43");
 assert(isVowel("U"), true, "Exercise 43");
@@ -693,6 +698,9 @@ addToDone("Exercise 43 is correct.")
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
 
+function hasVowels (str) {
+    if
+}
 assert(hasVowels("banana"), true, "Exercise 44");
 assert(hasVowels("ubuntu"), true, "Exercise 44");
 assert(hasVowels("QQQQ"), false, "Exercise 44");
@@ -701,7 +709,7 @@ addToDone("Exercise 44 is correct.")
 
 
 // Exercise 45
-// Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
+// Write a function definition named countVowels that takes in value and returns the count of the number of vowels in a sequence.
 
 assert(countVowels("banana"), 3, "Exercise 45");
 assert(countVowels("ubuntu"), 3, "Exercise 45");
@@ -723,7 +731,12 @@ addToDone("Exercise 46 is correct.")
 
 // Exercise 47
 // Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
-
+function startsWithVowel (str){
+    var firstLetter = str[0];
+    if (firstLetter = 'a'||'e'||'i'||'o' || 'u'){
+        return "true";
+    }
+}
 assert(startsWithVowel("ubuntu"), true, "Exercise 47");
 assert(startsWithVowel("banana"), false, "Exercise 47");
 assert(startsWithVowel("mango"), false, "Exercise 47");
@@ -732,7 +745,12 @@ addToDone("Exercise 47 is correct.")
 
 // Exercise 48
 // Write a function definition named endsWithVowel that takes in string and true if the string ends with a vowel
-
+function endsWithVowel (str){
+    var lastLetter = lastIndexOf(str);
+    if (lastLetter='a'||'e'||'i'||'o' || 'u'){
+        return "true";
+    }
+}
 
 assert(endsWithVowel("ubuntu"), true, "Exercise 48");
 assert(endsWithVowel("banana"), true, "Exercise 48");
