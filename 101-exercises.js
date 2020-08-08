@@ -206,19 +206,18 @@ assert(addOne(negativeOddNumber), negativeOddNumber + 1, "Exercise 11");
 addToDone("Exercise 11 is correct.")
 
 
-
 // Exercise 12
 // Write a function definition named isPositive that takes in a number and returns true or false if that number is positive.
 // Think about the definition of a number that is positive.
 // Is 5 positive? Is 0.25 positive? Is 0.00001 positive? Is -0.001 positive?
 // Is zero itself positive? What about infinity? What about negative infinity?
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators for guidance with JS comparison operators.
-function isPositive (n){
-  if (n > 0){
-    return true;
-  } else {
-    return false;
-  }
+function isPositive (num){
+    if (num > 0){
+        return true;
+    } else {
+        return false;
+    }
 }
 
 
@@ -527,6 +526,7 @@ addToDone("Exercise 30 is correct.")
 
 
 
+
 // Exercise 31
 // Write a function definition named cube that takes in a number and returns the number times itself, times itself.
 function cube(n){
@@ -677,14 +677,20 @@ assert(circumference(7), 43.982297150257104, "Exercise 42");
 addToDone("Exercise 42 is correct.")
 
 
+/*
 // Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
-function isVowel (value) {
-    if (value='a'|| 'e' || 'i' ||'o' ||'u'){
-        return "true";
-    } else {
-        return "false";
-    }
+
+function isVowel(str) {
+  var vowels = ['a','e','i','o','u'];
+  var char = str.toLowerCase();
+  for (var i=0;i<=vowels.length;i++){
+      if (char.length == 1 && vowels[i] === char){
+        return true;
+      }else {
+        return false;
+      }
+  }
 }
 
 assert(isVowel("a"), true, "Exercise 43");
@@ -693,23 +699,39 @@ assert(isVowel("banana"), false, "Exercise 43");
 assert(isVowel("Q"), false, "Exercise 43");
 assert(isVowel("y"), false, "Exercise 43");
 addToDone("Exercise 43 is correct.")
-
-
+*/
+/*
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
-
-function hasVowels (str) {
-    if
+function hasVowels(str){
+  var char = str.toLowerCase();
+  var vowels = ['a','e','i','o','u'];
+  for (var i=0;i<=char.length;i++){
+    if (vowels[i] === char)
+      {return true;
+      }else{
+        return false;
+      }
+  }
 }
+
 assert(hasVowels("banana"), true, "Exercise 44");
 assert(hasVowels("ubuntu"), true, "Exercise 44");
 assert(hasVowels("QQQQ"), false, "Exercise 44");
 assert(hasVowels("wyrd"), false, "Exercise 44");
 addToDone("Exercise 44 is correct.")
-
-
+*/
+/*
 // Exercise 45
-// Write a function definition named countVowels that takes in value and returns the count of the number of vowels in a sequence.
+// Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
+function countVowels(str){
+  var vowels = 'aeiouAEIOU';
+  var vCount = 0;
+  for (var i=0;i<=str.length;i++){
+    if (vowels.indexOf(str[i]) !== -1)
+      vCount += 1;
+  }
+}
 
 assert(countVowels("banana"), 3, "Exercise 45");
 assert(countVowels("ubuntu"), 3, "Exercise 45");
@@ -717,31 +739,29 @@ assert(countVowels("mango"), 2, "Exercise 45");
 assert(countVowels("QQQQ"), 0, "Exercise 45");
 assert(countVowels("wyrd"), 0, "Exercise 45");
 addToDone("Exercise 45 is correct.")
-
+*/
 
 // Exercise 46
 // Write a function definition named removeVowels that takes in string and returns the string without any vowels
-
+function removeVowels(str){
+    return str.replace(/[aeiou]/ig,'');
+}
 assert(removeVowels("banana"), "bnn", "Exercise 46");
 assert(removeVowels("ubuntu"), "bnt", "Exercise 46");
 assert(removeVowels("mango"), "mng", "Exercise 46");
 assert(removeVowels("QQQQ"), "QQQQ", "Exercise 46");
 addToDone("Exercise 46 is correct.")
 
-
+/*
 // Exercise 47
 // Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
-function startsWithVowel (str){
-    var firstLetter = str[0];
-    if (firstLetter = 'a'||'e'||'i'||'o' || 'u'){
-        return "true";
-    }
+startsWithVowels (str){
 }
 assert(startsWithVowel("ubuntu"), true, "Exercise 47");
 assert(startsWithVowel("banana"), false, "Exercise 47");
 assert(startsWithVowel("mango"), false, "Exercise 47");
 addToDone("Exercise 47 is correct.")
-
+*/
 
 // Exercise 48
 // Write a function definition named endsWithVowel that takes in string and true if the string ends with a vowel
