@@ -703,18 +703,20 @@ addToDone("Exercise 43 is correct.")
 /*
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
+var char = str.toLowerCase();
 function hasVowels(str){
-  var char = str.toLowerCase();
+  function checker(value){
   var vowels = ['a','e','i','o','u'];
-  for (var i=0;i<=char.length;i++){
-    if (vowels[i] === char)
-      {return true;
-      }else{
-        return false;
-      }
-  }
-}
 
+      for (var i = 0; i < vowels.length; i++) {
+          if (value.indexOf(vowels[i]) > -1) {
+              return false;
+          }
+      }else {
+            return true;
+    }
+      char=char.filter(checker);
+console.log(char);
 assert(hasVowels("banana"), true, "Exercise 44");
 assert(hasVowels("ubuntu"), true, "Exercise 44");
 assert(hasVowels("QQQQ"), false, "Exercise 44");
@@ -763,21 +765,31 @@ assert(startsWithVowel("mango"), false, "Exercise 47");
 addToDone("Exercise 47 is correct.")
 */
 
+/*
 // Exercise 48
 // Write a function definition named endsWithVowel that takes in string and true if the string ends with a vowel
 function endsWithVowel (str){
-    var lastLetter = lastIndexOf(str);
-    if (lastLetter='a'||'e'||'i'||'o' || 'u'){
+    var char = str.toLowerCase();
+    var lastLetter = char.lastIndexOf();
+    var vowels = 'aeiouAEIOU';
+    if (lastLetter= vowels){
         return "true";
+    }else{
+        return false;
     }
 }
+console.log('endsWithVowel results:');
+console.log(endsWithVowel('ubuntu'));
+console.log(endsWithVowel('banana'));
+console.log(endsWithVowel('mango'));
+console.log(endsWithVowel('spinach'));
 
 assert(endsWithVowel("ubuntu"), true, "Exercise 48");
 assert(endsWithVowel("banana"), true, "Exercise 48");
 assert(endsWithVowel("mango"), true, "Exercise 48");
 assert(endsWithVowel("spinach"), false, "Exercise 48");
 addToDone("Exercise 48 is correct.")
-
+*/
 
 // Exercise 49
 // Write a function definition named startsAndEndsWithVowel that takes in string and returns true if the string starts and ends with a vowel
