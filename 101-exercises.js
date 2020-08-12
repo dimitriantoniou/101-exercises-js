@@ -1023,23 +1023,28 @@ assert(mean([1, 5, 6]), 4, "Exercise 61");
 addToDone("Exercise 61 is correct.")
 
 
-/*
+
 // Exercise 62
 // Write a function definition named median that takes in sequence of numbers and returns the average value
-
 function median(arr){
-  var sum =0;
-  for (var i=0;i<arr.length;i++)
-    sum +=arr[i];
-  var average = sum/arr.length;
-  return average;
-  }
+    var median = 0
+    var length = arr.length;
+    arr.sort();
+    if (length % 2 === 0) {
+        median = (arr[length / 2 - 1] + arr[length / 2]) / 2;
+    } else {
+        median = arr[(length - 1) / 2];
+    }
+
+    return median;
+}
 assert(median([1, 2, 3, 4, 5]), 3.0, "Exercise 62");
 assert(median([1, 2, 3]), 2.0, "Exercise 62");
 assert(median([1, 5, 6]), 5.0, "Exercise 62");
 assert(median([1, 2, 5, 6]), 3.5, "Exercise 62");
 addToDone("Exercise 62 is correct.")
-*/
+
+
 
 
 // Exercise 63
@@ -1056,14 +1061,16 @@ assert(maxMinusMin([1, 1, 2, 3, 9]), 8, "Exercise 63");
 assert(maxMinusMin([2, 2, 3, 3, 3, 7]), 5, "Exercise 63");
 addToDone("Exercise 63 is correct.")
 
-/*
+
 // Exercise 64
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
 //mulitiply arr[0]*arr[1]*arr[2]...arr[arr.length-1]
+
 function productOfAll(arr){
-  var product = 0;
-  for (var i=0;i<arr.length;i++)
-  product += arr[i]*arr[i+1]...arr[arr.length-1];
+    var product = 1;
+    for (var i=0;i<arr.length;i++)
+        product *= arr[i];
+    return product;
 }
 
 
@@ -1071,7 +1078,7 @@ assert(productOfAll([1, 2, 3]), 6, "Exercise 64");
 assert(productOfAll([3, 4, 5]), 60, "Exercise 64");
 assert(productOfAll([2, 2, 3, 0]), 0, "Exercise 64");
 addToDone("Exercise 64 is correct.")
-*/
+
 
 // Exercise 65
 // Write a function definition named getHighestNumber that takes in sequence of numbers and returns the largest number.
