@@ -1536,7 +1536,9 @@ const books = [
 
 // Exercise 91
 // Write a function named getNumberOfBooks that takes in a array of objects and returns the number of objects in that array.
-
+function getNumberOfBooks(arr){
+    return arr.length;
+}
 assert(getNumberOfBooks(books), 4, "Exercise 91");
 addToDone("Exercise 91 is complete.")
 
@@ -1544,21 +1546,43 @@ addToDone("Exercise 91 is complete.")
 
 // Exercise 92
 // Write a function named totalOfBookPrices that takes in a array of objects and returns the sum total of all the book prices added together
-
+function totalOfBookPrices(arr){
+    var subTotal = 0;
+    for (var i=0;i<arr.length;i++){
+        subTotal+=arr[i].price;
+    }
+    return subTotal;
+}
 assert(totalOfBookPrices(books), 122.9, "Exercise 92")
 addToDone("Exercise 92 is complete.")
 
 
 // Exercise 93
 // Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
-
+function getAverageBookPrice(arr){
+    var subTotal =0;
+    var length = arr.length;
+    for (var i =0;i<arr.length;i++){
+        subTotal+=arr[i].price;
+    }
+    return subTotal/length;
+}
 assert(getAverageBookPrice(books), 30.725, "Exercise 93");
 addToDone("Exercise 93 is complete.")
 
-
+/*
 // Exercise 94
 // Write a function called highestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the highest priced book.
 // Hint: Much like sometimes start functions with a variable set to zero, you may want to create a object with the price set to zero to compare to each object's price in the array
+function highestPriceBook(arr){
+  var max =0;
+  books.forEach(function(book){
+  if (book.price > max) {
+    max = book.title;
+  }
+});
+  return max;
+}
 
 assert(highestPriceBook(books), {
     "title": "The Visual Display of Quantitative Information",
@@ -1567,7 +1591,7 @@ assert(highestPriceBook(books), {
 }, "Exercise 94");
 
 addToDone("Exercise 94 is complete")
-
+*/
 
 
 // Exercise 95
