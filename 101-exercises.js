@@ -1186,15 +1186,6 @@ assert(onlyNegativeNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -4, -3, -2
 assert(onlyNegativeNumbers([-4, -3, 1]), [-4, -3], "Exercise 70");
 addToDone("Exercise 70 is correct.");
 
-// Exercise 70
-// Write a function definition named onlyNegativeNumbers that takes in sequence of numbers and returns the negative numbers in an array.
-
-assert(onlyNegativeNumbers([1, 2, 3]), [], "Exercise 70");
-assert(onlyNegativeNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -4, -3, -2, -1], "Exercise 70");
-assert(onlyNegativeNumbers([-4, -3, 1]), [-4, -3], "Exercise 70");
-addToDone("Exercise 70 is correct.");
-
-
 
 // Exercise 71
 // Write a function definition named hasEvens that takes in sequence of numbers and returns true if there are any even numbers in the sequence
