@@ -1111,27 +1111,38 @@ assert(getSmallestNumber([3, 5, 9, 8, 1]), 1, "Exercise 66");
 assert(getSmallestNumber([8, 9, 4, 5, 7]), 4, "Exercise 66");
 addToDone("Exercise 66 is correct.")
 
-/*
 // Exercise 67
 // Write a function definition named onlyOddNumbers that takes in sequence of numbers and returns the odd numbers in an array.
-var odd = [];
-function onlyOddNumbers(arr){
-  for (var i =0;i<arr.length;i++)
-    if (i%2 !== 0){
-      odd.push(arr[i]);
+
+function onlyOddNumbers(array){
+    let arr = [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i] % 2 !== 0){
+            arr.push(array[i]);
+        }
     }
-  return odd;
+    return arr;
 }
 
 assert(onlyOddNumbers([1, 2, 3]), [1, 3], "Exercise 67");
 assert(onlyOddNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -3, -1, 1, 3, 5], "Exercise 67");
 assert(onlyOddNumbers([-4, -3, 1]), [-3, 1], "Exercise 67");
 addToDone("Exercise 67 is correct.")
-*/
+
 
 
 // Exercise 68
 // Write a function definition named onlyEvenNumbers that takes in sequence of numbers and returns the even numbers in an array.
+function onlyEvenNumbers(array){
+    let arr = [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i] % 2 === 0){
+            arr.push(array[i]);
+        }
+    }
+    return arr;
+}
+
 
 assert(onlyEvenNumbers([1, 2, 3]), [2], "Exercise 68");
 assert(onlyEvenNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-4, -2, 2, 4], "Exercise 68");
@@ -1141,12 +1152,39 @@ addToDone("Exercise 68 is correct.")
 
 // Exercise 69
 // Write a function definition named onlyPositiveNumbers that takes in sequence of numbers and returns the positive numbers in an array.
+function onlyPositiveNumbers(array){
+    let arr = [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i] >0){
+            arr.push(array[i]);
+        }
+    }
+    return arr;
+}
+
 
 assert(onlyPositiveNumbers([1, 2, 3]), [1, 2, 3], "Exercise 69");
 assert(onlyPositiveNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [1, 2, 3, 4, 5], "Exercise 69");
 assert(onlyPositiveNumbers([-4, -3, 1]), [1], "Exercise 69");
 addToDone("Exercise 69 is correct.")
 
+
+// Exercise 70
+// Write a function definition named onlyNegativeNumbers that takes in sequence of numbers and returns the negative numbers in an array.
+function onlyNegativeNumbers(array){
+    let arr = [];
+    for (let i = 0; i < array.length; i++){
+        if (array[i] <0){
+            arr.push(array[i]);
+        }
+    }
+    return arr;
+}
+
+assert(onlyNegativeNumbers([1, 2, 3]), [], "Exercise 70");
+assert(onlyNegativeNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-5, -4, -3, -2, -1], "Exercise 70");
+assert(onlyNegativeNumbers([-4, -3, 1]), [-4, -3], "Exercise 70");
+addToDone("Exercise 70 is correct.");
 
 // Exercise 70
 // Write a function definition named onlyNegativeNumbers that takes in sequence of numbers and returns the negative numbers in an array.
