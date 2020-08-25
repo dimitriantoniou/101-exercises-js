@@ -699,18 +699,28 @@ assert(countVowels("QQQQ"), 0, "Exercise 45");
 assert(countVowels("wyrd"), 0, "Exercise 45");
 addToDone("Exercise 45 is correct.")
 
-
+/*
 // Exercise 46
 // Write a function definition named removeVowels that takes in string and returns the string without any vowels
+function removeVowels(str){
+
+}
 assert(removeVowels("banana"), "bnn", "Exercise 46");
 assert(removeVowels("ubuntu"), "bnt", "Exercise 46");
 assert(removeVowels("mango"), "mng", "Exercise 46");
 assert(removeVowels("QQQQ"), "QQQQ", "Exercise 46");
 addToDone("Exercise 46 is correct.")
-
+*/
 
 // Exercise 47
 // Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
+function startsWithVowel(str){
+    if (str[0].match(/[aeiou]/gi)){
+        return true;
+    }else{
+        return false;
+    }
+}
 
 assert(startsWithVowel("ubuntu"), true, "Exercise 47");
 assert(startsWithVowel("banana"), false, "Exercise 47");
