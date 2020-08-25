@@ -897,7 +897,14 @@ addToDone("Exercise 60 is correct.")
 
 //  Exercise 61
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
-
+function mean(arr){
+    let sum = 0;
+    for (var i=0; i<arr.length;i++){
+        sum += arr[i];
+    }
+    let average = sum / arr.length;
+    return average;
+}
 assert(mean([1, 2, 3, 4]), 2.5, "Exercise 61");
 assert(mean([3, 3, 3]), 3, "Exercise 61");
 assert(mean([1, 5, 6]), 4, "Exercise 61");
