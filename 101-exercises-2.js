@@ -682,6 +682,16 @@ addToDone("Exercise 44 is correct.")
 // Exercise 45
 // Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
 
+function countVowels(value){
+    var matchingInstances = value.match(/[aeiou]/gi);
+    if (matchingInstances) {
+        return matchingInstances.length;
+    } else{
+        return 0
+    }
+}
+
+
 assert(countVowels("banana"), 3, "Exercise 45");
 assert(countVowels("ubuntu"), 3, "Exercise 45");
 assert(countVowels("mango"), 2, "Exercise 45");
@@ -692,7 +702,6 @@ addToDone("Exercise 45 is correct.")
 
 // Exercise 46
 // Write a function definition named removeVowels that takes in string and returns the string without any vowels
-
 assert(removeVowels("banana"), "bnn", "Exercise 46");
 assert(removeVowels("ubuntu"), "bnt", "Exercise 46");
 assert(removeVowels("mango"), "mng", "Exercise 46");
