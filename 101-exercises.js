@@ -761,14 +761,14 @@ addToDone("Exercise 44 is correct.")
 
 // Exercise 45
 // Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
-function countVowels(value){
-    var matchingInstances = value.match(/[aeiou]/gi);
-    if (matchingInstances) {
-        return matchingInstances.length;
-    } else{
-        return 0
+    function countVowels(value){
+        const matchingInstances = value.match(/[aeiou]/gi);
+        if (matchingInstances) {
+            return matchingInstances.length;
+        } else{
+            return 0
+        }
     }
-}
 
 /*
 //method b
