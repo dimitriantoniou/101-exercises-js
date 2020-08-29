@@ -14,8 +14,8 @@ const assert = function(actual, expected, message = "") {
 
 // Keep this function here in order to add correct questions to the counter
 function addToDone(message) {
-    var node = document.createElement("LI");                 // Create a <li> node
-    var textnode = document.createTextNode(message);         // Create a text node
+    let node = document.createElement("LI");                 // Create a <li> node
+    let textnode = document.createTextNode(message);         // Create a text node
     node.appendChild(textnode);                              // Append the text to <li>
     node.classList.add("finished");
     document.querySelector(".correct ul").appendChild(node);
@@ -30,7 +30,7 @@ function addToDone(message) {
 // Example problem setup: Create a variable named doingJSRightNow and assign it the boolean true.
 // The line below creates the variable named doingJSRightNow and assigns the boolean value true
 // To complete Exercise #0, uncomment the following line of JS
-var doingJSRightNow = true
+let doingJSRightNow = true
 
 // The lines below will test your answer. If you see an error, then it means that your answer is incorrect or incomplete.
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined to understand this error message.
@@ -91,7 +91,7 @@ addToDone("Exercise 6 is correct")
 
 // Exercise 7
 // Given the array of numbers defined below, reverse the array of numbers that you created above.
-var someNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let someNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 someNumbers.reverse();
 
 assert(someNumbers, [10, 9, 8, 7, 6, 5, 4, 3, 2, 1], "Exercise 7")
@@ -128,7 +128,7 @@ addToDone("Exercise 10 is correct")
 
 // This function generates a random number that is both positive and even
 function randomPositiveEvenNumber() {
-    var randomNumber = Math.ceil(Math.random() * 100) + 10;
+    let randomNumber = Math.ceil(Math.random() * 100) + 10;
     if(randomNumber % 2 !== 0) {
         return randomPositiveEvenNumber()
     }
@@ -138,7 +138,7 @@ function randomPositiveEvenNumber() {
 
 // this function generates a random number that is both positive and odd
 function randomPositiveOddNumber() {
-    var randomNumber = Math.ceil(Math.random() * 100) + 10;
+    let randomNumber = Math.ceil(Math.random() * 100) + 10;
     if(randomNumber % 2 === 0) {
         return randomPositiveOddNumber();
     }
@@ -148,7 +148,7 @@ function randomPositiveOddNumber() {
 
 // this function generates a random number that is both negative and even.
 function randomNegativeEvenNumber() {
-    var randomNumber = Math.ceil(Math.random() * -100) - 10;
+    let randomNumber = Math.ceil(Math.random() * -100) - 10;
     if(randomNumber % 2 === 0) {
         return randomNumber;
     }
@@ -158,7 +158,7 @@ function randomNegativeEvenNumber() {
 
 // this function generates a random number that is both negative and odd.
 function randomNegativeOddNumber() {
-    var randomNumber = Math.ceil(Math.random() * -100) - 10;
+    let randomNumber = Math.ceil(Math.random() * -100) - 10;
     if(randomNumber % 2 === 0) {
         return randomNegativeOddNumber();
     }
@@ -167,17 +167,17 @@ function randomNegativeOddNumber() {
 }
 
 // The next 4 lines create variables that hold these generated random numbers
-var positiveEvenNumber = randomPositiveEvenNumber()
-var positiveOddNumber = randomPositiveOddNumber();
-var negativeEvenNumber = randomNegativeEvenNumber();
-var negativeOddNumber = randomNegativeOddNumber();
+let positiveEvenNumber = randomPositiveEvenNumber()
+let positiveOddNumber = randomPositiveOddNumber();
+let negativeEvenNumber = randomNegativeEvenNumber();
+let negativeOddNumber = randomNegativeOddNumber();
 
 // Writing functions
 // See https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions for help with writing functions
 // Be sure to return values from your function definitions. The assert statements will call/run your function(s) for you.
 
 
-// Example function defintion:
+// Example function definition:
 // Write a sayHello function that adds the string "Hello, " to the beginning and "!" to the end of any given input.
 function sayHello(name) {
     return "Hello, " + name + "!";
@@ -257,7 +257,7 @@ addToDone("Exercise 13 is correct.")
 // Exercise 14
 // Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
 function isOdd(n){
-    return n%2!=0;
+    return n%2!==0;
 
 }
 assert(isOdd(positiveOddNumber), true, "Exercise 14");
@@ -297,7 +297,7 @@ addToDone("Exercise 16 is correct.")
 // Exercise 17
 // Write a function definition named isPositiveOdd that takes in a number and returns true or false if the value is both greater than zero and odd
 function isPositiveOdd(n){
-    return n%2!=0 && n>0;
+    return n%2!==0 && n>0;
 }
 
 
@@ -325,7 +325,7 @@ addToDone("Exercise 18 is correct.")
 // Exercise 19
 // Write a function definition named isNegativeOdd that takes in a number and returns true or false if the value is both less than zero and odd.
 function isNegativeOdd(n){
-    return n<0 && n%2!=0;
+    return n<0 && n%2!==0;
 }
 assert(isNegativeOdd(-3), true, "Exercise 19" );
 assert(isNegativeOdd(positiveOddNumber), false, "Exercise 19");
@@ -663,12 +663,8 @@ addToDone("Exercise 43 is correct.")
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
 function hasVowels(value){
-    var matchingInstances = value.match(/[aeiou]/gi);
-    if (matchingInstances){
-        return true;
-    } else{
-        return false
-    }
+    let matchingInstances = value.match(/[aeiou]/gi);
+    return !!matchingInstances;
 }
 
 
@@ -680,10 +676,10 @@ addToDone("Exercise 44 is correct.")
 
 
 // Exercise 45
-// Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
+// Write a function definition named countVowels that takes in value and returns the count of the number of vowels in a sequence.
 
 function countVowels(value){
-    var matchingInstances = value.match(/[aeiou]/gi);
+    let matchingInstances = value.match(/[aeiou]/gi);
     if (matchingInstances) {
         return matchingInstances.length;
     } else{
@@ -715,11 +711,7 @@ addToDone("Exercise 46 is correct.")
 // Exercise 47
 // Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
 function startsWithVowel(str){
-    if (str[0].match(/[aeiou]/gi)){
-        return true;
-    }else{
-        return false;
-    }
+    return !!str[0].match(/[aeiou]/gi);
 }
 
 assert(startsWithVowel("ubuntu"), true, "Exercise 47");
@@ -731,11 +723,7 @@ addToDone("Exercise 47 is correct.")
 // Exercise 48
 // Write a function definition named endsWithVowel that takes in string and true if the string ends with a vowel
 function endsWithVowel(str){
-    if (str[str.length-1].match(/[aeiou]/gi)){
-        return true;
-    }else{
-        return false;
-    }
+    return !!str[str.length - 1].match(/[aeiou]/gi);
 }
 
 assert(endsWithVowel("ubuntu"), true, "Exercise 48");
@@ -748,12 +736,9 @@ addToDone("Exercise 48 is correct.")
 // Exercise 49
 // Write a function definition named startsAndEndsWithVowel that takes in string and returns true if the string starts and ends with a vowel
 function startsAndEndsWithVowel(str){
-    if (str[str.length-1].match(/[aeiou]/gi) && str[0].match(/[aeiou]/gi)){
-        return true;
-    }else{
-        return false;
-    }
+    return !!(str[str.length - 1].match(/[aeiou]/gi) && str[0].match(/[aeiou]/gi));
 }
+
 assert(startsAndEndsWithVowel("ubuntu"), true, "Exercise 49");
 assert(startsAndEndsWithVowel("banana"), false, "Exercise 49");
 assert(startsAndEndsWithVowel("mango"), false, "Exercise 49");
@@ -883,7 +868,7 @@ addToDone("Exercise 59 is correct.")
 
 function sumAll(value){
     let sum=0;
-    for (var i =0; i<value.length;i++) {
+    for (let i =0; i<value.length;i++) {
         sum += value[i];
     }
     return sum;
@@ -899,11 +884,10 @@ addToDone("Exercise 60 is correct.")
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
 function mean(arr){
     let sum = 0;
-    for (var i=0; i<arr.length;i++){
+    for (let i=0; i<arr.length;i++){
         sum += arr[i];
     }
-    let average = sum / arr.length;
-    return average;
+    return sum / arr.length;
 }
 assert(mean([1, 2, 3, 4]), 2.5, "Exercise 61");
 assert(mean([3, 3, 3]), 3, "Exercise 61");
@@ -928,7 +912,7 @@ addToDone("Exercise 62 is correct.")
 */
 
 // Exercise 63
-// Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus theminimum.
+// Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus the minimum.
 function maxMinusMin(arr){
     arr.sort(function(a,b){return a-b;});
     return arr[arr.length-1]-arr[0];
@@ -944,7 +928,7 @@ addToDone("Exercise 63 is correct.")
 // Write a function definition named productOfAll that takes in sequence of numbers and returns the product of multiplying all the numbers together
 function productOfAll(arr){
     let product = 1
-    for (var i =0;i<arr.length;i++){
+    for (let i =0;i<arr.length;i++){
         product *= 1*arr[i];
     }
     return product;
@@ -1004,7 +988,16 @@ addToDone("Exercise 67 is correct.")
 
 // Exercise 68
 // Write a function definition named onlyEvenNumbers that takes in sequence of numbers and returns the even numbers in an array.
-function fdsaoiflfadshf
+function onlyEvenNumbers(array){
+    let arr = [];
+    for (let i =0; i<array.length;i++){
+        if (array[i]%2===0){
+            arr.push(array[i]);
+        }
+    }
+    return arr;
+}
+
 assert(onlyEvenNumbers([1, 2, 3]), [2], "Exercise 68");
 assert(onlyEvenNumbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]), [-4, -2, 2, 4], "Exercise 68");
 assert(onlyEvenNumbers([-4, -3, 1]), [-4], "Exercise 68");
@@ -1389,7 +1382,7 @@ addToDone("Exercise 99 is complete.")
 
 
 // Exercise 100
-// Write a function named getAverageSpentPerItem that takes in the shopping cart and returns the average of summing each item's quanties times that item's price.
+// Write a function named getAverageSpentPerItem that takes in the shopping cart and returns the average of summing each item's quantities times that item's price.
 // Hint: You may need to set an initial total price and total total quantity to zero, then sum up and divide that total price by the total quantity
 
 assert(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
