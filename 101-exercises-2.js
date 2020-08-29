@@ -190,7 +190,7 @@ assert(sayHello("June"), "Hello, June!");
 assert(sayHello("World"), "Hello, World!");
 
 
-// Heres another example function definition
+// Here's another example function definition
 // This plusTwo function takes in a variable and adds the number 2 to it.
 function plusTwo(x) {
     return x + 2;
@@ -695,18 +695,20 @@ assert(countVowels("QQQQ"), 0, "Exercise 45");
 assert(countVowels("wyrd"), 0, "Exercise 45");
 addToDone("Exercise 45 is correct.")
 
-/*
+
 // Exercise 46
 // Write a function definition named removeVowels that takes in string and returns the string without any vowels
 function removeVowels(str){
-
+    return str.replace(/[aeiou]/gi,'')
 }
+
 assert(removeVowels("banana"), "bnn", "Exercise 46");
 assert(removeVowels("ubuntu"), "bnt", "Exercise 46");
 assert(removeVowels("mango"), "mng", "Exercise 46");
 assert(removeVowels("QQQQ"), "QQQQ", "Exercise 46");
 addToDone("Exercise 46 is correct.")
-*/
+
+
 
 // Exercise 47
 // Write a function definition named startsWithVowel that takes in string and true if the string starts with a vowel
@@ -879,7 +881,6 @@ assert(sumAll([0, 5, 6]), 11, "Exercise 60");
 addToDone("Exercise 60 is correct.")
 
 
-
 //  Exercise 61
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
 function mean(arr){
@@ -910,6 +911,7 @@ assert(median([1, 5, 6]), 5.0, "Exercise 62");
 assert(median([1, 2, 5, 6]), 3.5, "Exercise 62");
 addToDone("Exercise 62 is correct.")
 */
+
 
 // Exercise 63
 // Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus the minimum.
