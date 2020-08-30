@@ -1150,7 +1150,15 @@ addToDone("Exercise 75 is correct.")
 
 // Exercise 76
 // Write a function definition named countPositives that takes in sequence of numbers and returns a count of the number of positive numbers
-
+function countPositives(array){
+    let arr=[];
+    for(let i=0;i<array.length;i++){
+        if (array[i]>0){
+            arr.push(array[i]);
+        }
+    }
+    return arr.length;
+}
 assert(countPositives([1, -2, 3]), 2, "Exercise 76");
 assert(countPositives([2, -5, -6]), 1, "Exercise 76");
 assert(countPositives([3, 3, 3]), 3, "Exercise 76");
