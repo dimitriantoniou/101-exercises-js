@@ -1093,6 +1093,17 @@ addToDone("Exercise 72 is correct.")
 
 // Exercise 73
 // Write a function definition named hasOdds that takes in sequence of numbers and returns true if there are any odd numbers in the sequence
+function hasOdds(array){
+    let arr =[];
+    for (let i =0;i<array.length;i++){
+        if(array[i]%2!==0){
+            arr.push(array[i]);
+        }
+    }
+    if (arr.length>0){
+        return true;
+    }else return false;
+}
 
 assert(hasOdds([1, 2, 3]), true, "Exercise 73");
 assert(hasOdds([2, 5, 6]), true, "Exercise 73");
@@ -1103,6 +1114,15 @@ addToDone("Exercise 73 is correct.")
 
 // Exercise 74
 // Write a function definition named countOdds that takes in sequence of numbers and returns a count of the any odd numbers in the sequence
+function countOdds(array){
+    let arr =[];
+    for(let i=0;i<array.length;i++){
+        if(array[i]%2!==0){
+            arr.push(array[i]);
+        }
+    }
+    return arr.length;
+}
 
 assert(countOdds([1, 2, 3]), 2, "Exercise 74");
 assert(countOdds([2, 5, 6]), 1, "Exercise 74");
