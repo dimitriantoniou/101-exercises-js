@@ -1075,7 +1075,15 @@ addToDone("Exercise 71 is correct.");
 
 // Exercise 72
 // Write a function definition named countEvens that takes in sequence of numbers and returns the number of even numbers
-
+function countEvens(array){
+    let arr = [];
+    for (let i=0;i<array.length;i++){
+        if(array[i]%2===0){
+            arr.push(array[i]);
+        }
+    }
+    return arr.length;
+}
 assert(countEvens([1, 2, 3]), 1, "Exercise 72");
 assert(countEvens([2, 5, 6]), 2, "Exercise 72");
 assert(countEvens([3, 3, 3]), 0, "Exercise 72");
