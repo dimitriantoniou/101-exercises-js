@@ -1455,7 +1455,17 @@ addToDone("Exercise 93 is complete.")
 // Exercise 94
 // Write a function called highestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the highest priced book.
 // Hint: Much like sometimes start functions with a variable set to zero, you may want to create a object with the price set to zero to compare to each object's price in the array
-
+function highestPriceBook(books){
+    let highestPrice = 0;
+    let highestPriceBook = 0;
+    for (let i=0;i<books.length;i++){
+        if (books[i].price>highestPrice){
+            highestPrice=books[i].price;
+            highestPriceBook=books[i];
+        }
+    }
+    return highestPriceBook;
+}
 assert(highestPriceBook(books), {
     "title": "The Visual Display of Quantitative Information",
     "price": 38.00,
