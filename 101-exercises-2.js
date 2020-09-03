@@ -1441,7 +1441,13 @@ addToDone("Exercise 92 is complete.")
 
 // Exercise 93
 // Write a function named getAverageBookPrice that takes in a array of objects and returns the average book price.
-
+function getAverageBookPrice(arr){
+    let sum = 0;
+    for (let i=0;i<arr.length;i++){
+        sum += arr[i].price;
+    }
+    return sum/arr.length;
+}
 assert(getAverageBookPrice(books), 30.725, "Exercise 93");
 addToDone("Exercise 93 is complete.")
 
