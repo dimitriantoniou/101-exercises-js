@@ -1479,7 +1479,17 @@ addToDone("Exercise 94 is complete")
 // Exercise 95
 // Write a function called lowestPriceBook that takes in the above defined array of objects "books" and returns the object containing the title, price, and author of the book with the lowest priced book.
 // Hint: Much like sometimes start functions with a variable set to zero or float('inf'), you may want to create a object with the price set to float('inf') to compare to each object in the array
-
+function lowestPriceBook(books){
+    let lowestPrice = Infinity;
+    let lowestPriceBook = 0;
+    for(let i=0;i<books.length;i++){
+        if (books[i].price<lowestPrice){
+            lowestPrice=books[i].price;
+            lowestPriceBook=books[i];
+        }
+    }
+    return lowestPriceBook;
+}
 
 assert(lowestPriceBook(books), {
     "title": "Weapons of Math Destruction",
