@@ -1169,7 +1169,15 @@ addToDone("Exercise 76 is correct.")
 
 // Exercise 77
 // Write a function definition named onlyPositiveEvens that takes in sequence of numbers and returns an array containing all the positive evens from the sequence
-
+function onlyPositiveEvens(arr){
+    let onlyPositiveEvens=[];
+    for(let i =0;i<arr.length;i++){
+        if(arr[i]>0 && arr[i]%2===0){
+            onlyPositiveEvens.push(arr[i]);
+        }
+    }
+    return onlyPositiveEvens;
+}
 assert(onlyPositiveEvens([1, -2, 3]), [], "Exercise 77");
 assert(onlyPositiveEvens([2, -5, -6]), [2], "Exercise 77");
 assert(onlyPositiveEvens([3, 3, 4, 6]), [4, 6], "Exercise 77");
@@ -1179,7 +1187,15 @@ addToDone("Exercise 77 is correct.")
 
 // Exercise 78
 // Write a function definition named onlyPositiveOdds that takes in sequence of numbers and returns an array containing all the positive odd numbers from the sequence
-
+function onlyPositiveOdds(arr){
+    let onlyPositiveOdds = [];
+    for (let i=0;i<arr.length;i++){
+        if(arr[i]>0 && arr[i]%2!==0){
+            onlyPositiveOdds.push(arr[i]);
+        }
+    }
+    return onlyPositiveOdds;
+}
 assert(onlyPositiveOdds([1, -2, 3]), [1, 3], "Exercise 78");
 assert(onlyPositiveOdds([2, -5, -6]), [], "Exercise 78");
 assert(onlyPositiveOdds([3, 3, 4, 6]), [3, 3], "Exercise 78");
