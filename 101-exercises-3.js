@@ -1241,7 +1241,15 @@ addToDone("Exercise 80 is correct.")
 
 // Exercise 81
 // Write a function definition named shortestString that takes in an array of strings and returns the shortest string in the array.
-
+function shortestString(arr){
+    let shortest = arr[0];
+    for(let i=0;i<arr.length;i++){
+        if (arr[i].length<shortest.length){
+            shortest = arr[i];
+        }
+    }
+    return shortest;
+}
 assert(shortestString(["kiwi", "mango", "strawberry"]), "kiwi", "Exercise 81");
 assert(shortestString(["hello", "everybody"]), "hello", "Exercise 81");
 assert(shortestString(["mary", "had", "a", "little", "lamb"]), "a", "Exercise 81");
