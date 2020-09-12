@@ -115,6 +115,7 @@ addToDone("Exercise 9 is correct.")
 // Write the code necessary to produce a single array that holds all fruits then all vegetables in the order as they were sorted above.
 // Assign the result to a variable named fruitsAndVeggies.
 // *hint* the search engine search here would be "how to combine two arrays in JavaScript", for example.
+let fruitsAndVeggies = fruits.concat(vegetables);
 
 assert(fruitsAndVeggies, ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana', 'broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'], "Exercise 10")
 addToDone("Exercise 10 is correct")
@@ -197,7 +198,9 @@ assert(plusTwo(0), 2, "zero plus 2 is two")
 
 // Exercise 11
 // Write a function definition for a function named addOne that takes in a number and returns that number plus one
-
+function addOne(n){
+    return n+1;
+}
 
 
 assert(addOne(2), 3, "Exercise 11");
@@ -214,7 +217,9 @@ addToDone("Exercise 11 is correct.")
 // Is 5 positive? Is 0.25 positive? Is 0.00001 positive? Is -0.001 positive?
 // Is zero itself positive? What about infinity? What about negative infinity?
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators for guidance with JS comparison operators.
-
+function isPositive(n){
+    return (n>0);
+}
 
 assert(isPositive(0.25), true, "Exercise 12");
 assert(isPositive(0.00001), true, "Exercise 12");
@@ -231,7 +236,9 @@ addToDone("Exercise 12 is correct.")
 
 // Exercise 13
 // Write a function definition named isNegative that takes in a number and returns true or False if that number is negative.
-
+function isNegative(n){
+    return (n<0);
+}
 
 assert(isNegative(positiveOddNumber), false, "Exercise 13");
 assert(isNegative(positiveEvenNumber), false, "Exercise 13");
@@ -242,7 +249,9 @@ addToDone("Exercise 13 is correct.")
 
 // Exercise 14
 // Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
-
+function isOdd(n){
+    return(n%2!==0);
+}
 
 assert(isOdd(positiveOddNumber), true, "Exercise 14");
 assert(isOdd(positiveEvenNumber), false, "Exercise 14");
@@ -252,7 +261,9 @@ addToDone("Exercise 14 is correct.")
 
 // Exercise 15
 // Write a function definition named isEven that takes in a number and returns true or false if that number is even.
-
+function isEven(n){
+    return (n%2===0);
+}
 
 assert(isEven(2), true, "Exercise 15");
 assert(isEven(positiveOddNumber), false, "Exercise 15");
@@ -264,7 +275,9 @@ addToDone("Exercise 15 is correct.")
 
 // Exercise 16
 // Write a function definition named identity that takes in any input and returns that input. Don't overthink this one!
-
+function identity(input){
+    return input;
+}
 
 assert(identity(fruits), fruits, "Exercise 16");
 assert(identity(vegetables), vegetables, "Exercise 16");
@@ -277,7 +290,9 @@ addToDone("Exercise 16 is correct.")
 
 // Exercise 17
 // Write a function definition named isPositiveOdd that takes in a number and returns true or false if the value is both greater than zero and odd
-
+function isPositiveOdd(n){
+    return(n>0&&n%2!==0);
+}
 
 
 assert(isPositiveOdd(3), true, "Exercise 17");
@@ -290,7 +305,9 @@ addToDone("Exercise 17 is correct.")
 
 // Exercise 18
 // Write a function definition named isPositiveEven that takes in a number and returns true or false if the value is both greater than zero and even
-
+function isPositiveEven(n){
+    return (n>0&&n%2===0);
+}
 
 assert(isPositiveEven(4), true, "Exercise 18" );
 assert(isPositiveEven(positiveOddNumber), false, "Exercise 18");
@@ -302,7 +319,9 @@ addToDone("Exercise 18 is correct.")
 
 // Exercise 19
 // Write a function definition named isNegativeOdd that takes in a number and returns true or false if the value is both less than zero and odd.
-
+function isNegativeOdd(n){
+    return(n<0&&n%2!==0);
+}
 assert(isNegativeOdd(-3), true, "Exercise 19" );
 assert(isNegativeOdd(positiveOddNumber), false, "Exercise 19");
 assert(isNegativeOdd(positiveEvenNumber), false, "Exercise 19");
@@ -313,7 +332,9 @@ addToDone("Exercise 19 is correct.")
 
 // Exercise 20
 // Write a function definition named isNegativeEven that takes in a number and returns true or false if the value is both less than zero and even.
-
+function isNegativeEven(n){
+    return(n<0&&n%2===0);
+}
 assert(isNegativeEven(-4), true, "Exercise 20" );
 assert(isNegativeEven(positiveOddNumber), false, "Exercise 20");
 assert(isNegativeEven(positiveEvenNumber), false, "Exercise 20");
@@ -325,7 +346,9 @@ addToDone("Exercise 20 is correct.")
 
 // Exercise 21
 // Write a function definition named half that takes in a number and returns half the provided number.
-
+function half(n){
+    return n/2;
+}
 
 assert(half(4), 2, "Exercise 21");
 assert(half(5), 2.5, "Exercise 21");
@@ -339,7 +362,9 @@ addToDone("Exercise 21 is correct.")
 
 // Exercise 22
 // Write a function definition named double that takes in a number and returns double the provided number.
-
+function double(n){
+    return 2*n;
+}
 assert(double(4), 8, "Exercise 22");
 assert(double(5), 10, "Exercise 22");
 assert(double(positiveOddNumber), positiveOddNumber * 2, "Exercise 22");
@@ -352,7 +377,9 @@ addToDone("Exercise 22 is correct.")
 
 // Exercise 23
 // Write a function definition named triple that takes in a number and returns triple the provided number.
-
+function triple(n){
+    return 3*n;
+}
 assert(triple(4), 12, "Exercise 23");
 assert(triple(5), 15, "Exercise 23");
 assert(triple(positiveOddNumber), positiveOddNumber * 3, "Exercise 23");
@@ -365,7 +392,9 @@ addToDone("Exercise 23 is correct.")
 
 // Exercise 24
 // Write a function definition named reverseSign that takes in a number and returns the provided number but with the sign reversed.
-
+function reverseSign(n){
+    return -n;
+}
 assert(reverseSign(4), -4, "Exercise 24");
 assert(reverseSign(-5), 5, "Exercise 24");
 assert(reverseSign(positiveOddNumber), positiveOddNumber * -1, "Exercise 24");
@@ -378,7 +407,9 @@ addToDone("Exercise 24 is correct.")
 
 // Exercise 25
 // Write a function definition named absoluteValue that takes in a number and returns the absolute value of the provided number
-
+function absoluteValue(n){
+    return Math.abs(n);
+}
 assert(absoluteValue(4), 4, "Exercise 25");
 assert(absoluteValue(-5), 5, "Exercise 25");
 assert(absoluteValue(positiveOddNumber), positiveOddNumber, "Exercise 25");
@@ -391,7 +422,9 @@ addToDone("Exercise 25 is correct.")
 
 // Exercise 26
 // Write a function definition named isMultipleOfThree that takes in a number and returns true or false if the number is evenly divisible by 3.
-
+function isMultipleOfThree(n){
+    return(n%3===0);
+}
 assert(isMultipleOfThree(3), true, "Exercise 26");
 assert(isMultipleOfThree(15), true, "Exercise 26");
 assert(isMultipleOfThree(9), true, "Exercise 26");
@@ -404,7 +437,9 @@ addToDone("Exercise 26 is correct.")
 
 // Exercise 27
 // Write a function definition named isMultipleOfFive that takes in a number and returns true or false if the number is evenly divisible by 5.
-
+function isMultipleOfFive(n){
+    return (n%5===0);
+}
 assert(isMultipleOfFive(3), false, "Exercise 27");
 assert(isMultipleOfFive(15), true, "Exercise 27");
 assert(isMultipleOfFive(9), false, "Exercise 27");
@@ -416,7 +451,9 @@ addToDone("Exercise 27 is correct.")
 
 // Exercise 28
 // Write a function definition named isMultipleOfBothThreeAndFive that takes in a number and returns true or false if the number is evenly divisible by both 3 and 5.
-
+function isMultipleOfBothThreeAndFive(n){
+    return(n%3===0&&n%5===0);
+}
 
 assert(isMultipleOfBothThreeAndFive(15), true, "Exercise 28");
 assert(isMultipleOfBothThreeAndFive(45), true, "Exercise 28");
@@ -430,7 +467,9 @@ addToDone("Exercise 28 is correct.")
 
 // Exercise 29
 // Write a function definition named square that takes in a number and returns the number times itself.
-
+function square(n){
+    return n*n;
+}
 assert(square(3), 9, "Exercise 29");
 assert(square(2), 4, "Exercise 29");
 assert(square(9), 81, "Exercise 29");
@@ -441,7 +480,9 @@ addToDone("Exercise 29 is correct.")
 
 // Exercise 30
 // Write a function definition named add that takes in two numbers and returns the sum.
-
+function add(a,b){
+    return a+b;
+}
 
 assert(add(3, 2), 5, "Exercise 30");
 assert(add(10, -2), 8, "Exercise 30");
@@ -452,7 +493,9 @@ addToDone("Exercise 30 is correct.")
 
 // Exercise 31
 // Write a function definition named cube that takes in a number and returns the number times itself, times itself.
-
+function cube(n){
+    return n*n*n;
+}
 assert(cube(3), 27, "Exercise 31");
 assert(cube(2), 8, "Exercise 31");
 assert(cube(5), 125, "Exercise 31");
@@ -463,7 +506,9 @@ addToDone("Exercise 31 is correct.")
 
 // Exercise 32
 // Write a function definition named squareRoot that takes in a number and returns the square root of the provided number
-
+function squareRoot(n){
+    return Math.sqrt(n);
+}
 
 assert(squareRoot(4), 2.0, "Exercise 32");
 assert(squareRoot(64), 8.0, "Exercise 32");
@@ -475,7 +520,9 @@ addToDone("Exercise 32 is correct.")
 
 // Exercise 33
 // Write a function definition named subtract that takes in two numbers and returns the first minus the second argument.
-
+function subtract(a,b){
+    return a-b;
+}
 
 assert(subtract(8, 6), 2, "Exercise 33");
 assert(subtract(27, 4), 23, "Exercise 33");
@@ -486,7 +533,9 @@ addToDone("Exercise 33 is correct.")
 
 // Exercise 34
 // Write a function definition named multiply that takes in two numbers and returns the first times the second argument.
-
+function multiply(a,b) {
+    return a * b;
+}
 assert(multiply(2, 1), 2, "Exercise 34");
 assert(multiply(3, 5), 15, "Exercise 34");
 assert(multiply(5, 2), 10, "Exercise 34");
@@ -496,6 +545,9 @@ addToDone("Exercise 34 is correct.")
 
 // Exercise 35
 // Write a function definition named divide that takes in two numbers and returns the first argument divided by the second argument.
+function divide(a,b){
+    return a/b;
+}
 
 
 assert(divide(27, 9), 3, "Exercise 35");
@@ -507,7 +559,9 @@ addToDone("Exercise 35 is correct.")
 
 // Exercise 36
 // Write a function definition named quotient that takes in two numbers and returns the quotient of dividing the first argument by the second argument.
-
+function quotient(a,b){
+    return Math.floor(a/b);
+}
 assert(quotient(27, 9), 3, "Exercise 36");
 assert(quotient(5, 2), 2, "Exercise 36");
 assert(quotient(10, 3), 3, "Exercise 36");
@@ -516,7 +570,9 @@ addToDone("Exercise 36 is correct.")
 
 // Exercise 37
 // Write a function definition named remainder that takes in two numbers and returns the remainder of first argument divided by the second argument.
-
+function remainder(a,b){
+    return a%b;
+}
 assert(remainder(3, 3), 0, "Exercise 37");
 assert(remainder(5, 2), 1, "Exercise 37");
 assert(remainder(7, 5), 2, "Exercise 37");
@@ -526,7 +582,9 @@ addToDone("Exercise 37 is correct.")
 
 // Exercise 38
 // Write a function definition named sumOfSquares that takes in two numbers, squares each number, then returns the sum of both squares.
-
+function sumOfSquares(a,b){
+    return a*a+b*b;
+}
 assert(sumOfSquares(3, 2), 13, "Exercise 38");
 assert(sumOfSquares(5, 2), 29, "Exercise 38");
 assert(sumOfSquares(2, 4), 20, "Exercise 38");
@@ -536,7 +594,9 @@ addToDone("Exercise 38 is correct.")
 
 // Exercise 39
 // Write a function definition named timesTwoPlusThree that takes in a number, multiplies it by two, adds 3 and returns the result.
-
+function timesTwoPlusThree(n){
+    return n*2+3;
+}
 assert(timesTwoPlusThree(0), 3, "Exercise 39");
 assert(timesTwoPlusThree(1), 5, "Exercise 39");
 assert(timesTwoPlusThree(2), 7, "Exercise 39");
@@ -547,7 +607,9 @@ addToDone("Exercise 39 is correct.")
 
 // Exercise 40
 // Write a function definition named areaOfRectangle that takes in two numbers and returns the product.
-
+function areaOfRectangle(a,b){
+    return a*b;
+}
 assert(areaOfRectangle(1, 3), 3, "Exercise 40");
 assert(areaOfRectangle(5, 2), 10, "Exercise 40");
 assert(areaOfRectangle(2, 7), 14, "Exercise 40");
@@ -558,7 +620,9 @@ addToDone("Exercise 40 is correct.")
 
 // Exercise 41
 // Write a function definition named areaOfCircle that takes in a number representing a circle's radius and returns the area of the circle
-
+function areaOfCircle(r){
+    return Math.PI*r*r;
+}
 
 assert(areaOfCircle(3), 28.274333882308138, "Exercise 41");
 assert(areaOfCircle(5), 78.53981633974483, "Exercise 41");
@@ -568,7 +632,9 @@ addToDone("Exercise 41 is correct.")
 
 // Exercise 42
 // Write a function definition named circumference that takes in a number representing a circle's radius and returns the circumference.
-
+function circumference(r){
+    return 2*Math.PI*r;
+}
 assert(circumference(3), 18.84955592153876, "Exercise 42");
 assert(circumference(5), 31.41592653589793, "Exercise 42");
 assert(circumference(7), 43.982297150257104, "Exercise 42");
@@ -591,6 +657,18 @@ function isOneOrTwoOrThree(x) {
 
 // Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
+function isVowel(str) {
+    let string = str.toLowerCase();
+    if (str.length === 1){
+        if (string ==="a"|| string ==="e"|| string ==="i"|| string ==="o"|| string ==="u"){
+            return true;
+        }else{
+            return false;
+        }
+    }else{
+        return false;
+    }
+}
 
 assert(isVowel("a"), true, "Exercise 43");
 assert(isVowel("U"), true, "Exercise 43");
@@ -602,7 +680,13 @@ addToDone("Exercise 43 is correct.")
 
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
-
+function hasVowels(str){
+    if(str.match(/[aeiou]/gi)){
+        return true;
+    }else{
+        return false;
+    }
+}
 //implemented regex for string.match
 assert(hasVowels("banana"), true, "Exercise 44");
 assert(hasVowels("ubuntu"), true, "Exercise 44");
@@ -613,7 +697,15 @@ addToDone("Exercise 44 is correct.")
 
 // Exercise 45
 // Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
-
+function countVowels(str){
+    let counter=0;
+    for(let i =0;i<str.length;i++){
+        if (str[i].match(/[aeiou]/gi)){
+            counter++;
+        }
+    }
+    return counter;
+}
 assert(countVowels("banana"), 3, "Exercise 45");
 assert(countVowels("ubuntu"), 3, "Exercise 45");
 assert(countVowels("mango"), 2, "Exercise 45");
@@ -624,7 +716,10 @@ addToDone("Exercise 45 is correct.")
 
 // Exercise 46
 // Write a function definition named removeVowels that takes in string and returns the string without any vowels
+function removeVowels(str){
+    let String = "";
 
+}
 assert(removeVowels("banana"), "bnn", "Exercise 46");
 assert(removeVowels("ubuntu"), "bnt", "Exercise 46");
 assert(removeVowels("mango"), "mng", "Exercise 46");
