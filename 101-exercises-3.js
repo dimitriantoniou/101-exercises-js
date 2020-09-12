@@ -1591,7 +1591,18 @@ addToDone("Exercise 99 is complete.")
 // Exercise 100
 // Write a function named getAverageSpentPerItem that takes in the shopping cart and returns the average of summing each item's quanties times that item's price.
 // Hint: You may need to set an initial total price and total total quantity to zero, then sum up and divide that total price by the total quantity
-
+function getAverageSpentPerItem(shoppingCart){
+    // sum of array of items[i].quantity * items[i.*price
+    let totalPrice =0
+    let totalQuant=0;
+    for (let i =0;i<shoppingCart.items.length;i++){
+        totalPrice += shoppingCart.items[i].quantity*shoppingCart.items[i].price;
+    }
+    for(let i=0;i<shoppingCart.items.length;i++){
+        totalQuant += shoppingCart.items[i].quantity;
+    }
+    return totalPrice/totalQuant;
+}
 assert(getAverageSpentPerItem(shoppingCart), 1.333529411764706, "Exercise 100");
 addToDone("Exercise 100 is complete.")
 
