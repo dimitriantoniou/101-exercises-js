@@ -1464,7 +1464,7 @@ function highestPriceBook(books){
     for (let i=0;i<books.length;i++){
         if (books[i].price>highestPrice){
             highestPrice=books[i].price;
-            highestPriceBook=books[i];
+            highestPriceBook = books[i];
         }
     }
     return highestPriceBook;
