@@ -1104,16 +1104,24 @@ assert(countEvens([3, 3, 3]), 0, "Exercise 72");
 assert(countEvens([5, 6, 7, 8] ), 2, "Exercise 72");
 addToDone("Exercise 72 is correct.")
 
-/*
+
 // Exercise 73
 // Write a function definition named hasOdds that takes in sequence of numbers and returns true if there are any odd numbers in the sequence
-
+function hasOdds(arr){
+    let odd = false;
+    for (let i =0;i<arr.length;i++){
+        if (arr[i]%2!==0){
+            odd=true;
+        }
+    }
+    return odd;
+}
 assert(hasOdds([1, 2, 3]), true, "Exercise 73");
 assert(hasOdds([2, 5, 6]), true, "Exercise 73");
 assert(hasOdds([3, 3, 3]), true, "Exercise 73");
 assert(hasOdds([2, 4, 6]), false, "Exercise 73");
 addToDone("Exercise 73 is correct.")
-*/
+
 
 // Exercise 74
 // Write a function definition named countOdds that takes in sequence of numbers and returns a count of the any odd numbers in the sequence
