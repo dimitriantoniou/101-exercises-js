@@ -1067,24 +1067,24 @@ assert(onlyNegativeNumbers([-4, -3, 1]), [-4, -3], "Exercise 70");
 addToDone("Exercise 70 is correct.");
 
 
-/*
+
 // Exercise 71
 // Write a function definition named hasEvens that takes in sequence of numbers and returns true if there are any even numbers in the sequence
 function hasEvens(arr){
+    let evens = false;
     for (let i=0;i<arr.length;i++){
-        if (arr[i]%2===0){
-            return true;
-            break;
+        if(arr[i]%2===0){
+            evens = true;
         }
-        return false;
     }
+    return evens;
 }
 assert(hasEvens([1, 2, 3]), true, "Exercise 71");
 assert(hasEvens([2, 5, 6]), true, "Exercise 71");
 assert(hasEvens([3, 3, 3]), false, "Exercise 71");
 assert(hasEvens([]), false, "Exercise 71");
 addToDone("Exercise 71 is correct.");
-*/
+
 
 
 // Exercise 72
