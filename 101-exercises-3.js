@@ -920,17 +920,18 @@ assert(mean([1, 5, 6]), 4, "Exercise 61");
 addToDone("Exercise 61 is correct.")
 
 
-/*
+
 // Exercise 62
 // Write a function definition named median that takes in sequence of numbers and returns the average value
 //this one always stumps me
 function median(arr) {
     let medianValue = 0;
-    arr.sort((a, b) => a - b);
-    if (arr.length % 2 !== 0) {
-        medianValue = arr[(arr.length/2 + (arr.length/2+1))/2];
+    let length =arr.length;
+    arr.sort();
+    if (length%2 === 0) {
+        medianValue = (arr[length/2-1]+arr[length/2])/2;
     }else{
-        medianValue = arr[(arr.length+1)/2];
+        medianValue = arr[(length-1)/2];
     }
     return medianValue;
 }
@@ -939,7 +940,7 @@ assert(median([1, 2, 3]), 2.0, "Exercise 62");
 assert(median([1, 5, 6]), 5.0, "Exercise 62");
 assert(median([1, 2, 5, 6]), 3.5, "Exercise 62");
 addToDone("Exercise 62 is correct.")
-*/
+
 
 // Exercise 63
 // Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus theminimum.
