@@ -933,18 +933,26 @@ assert(mean([1, 5, 6]), 4, "Exercise 61");
 addToDone("Exercise 61 is correct.")
 
 
-/*
+
 // Exercise 62
 // Write a function definition named median that takes in sequence of numbers and returns the average value
 
 //this one always stumps me
+function median(array){
+    const middle = Math.floor(array.length / 2);
+    if (array.length % 2 === 0) {
+        return (array[middle - 1] + array[middle]) / 2;
+    }
+    return array[middle];
+}
+
 
 assert(median([1, 2, 3, 4, 5]), 3.0, "Exercise 62");
 assert(median([1, 2, 3]), 2.0, "Exercise 62");
 assert(median([1, 5, 6]), 5.0, "Exercise 62");
 assert(median([1, 2, 5, 6]), 3.5, "Exercise 62");
 addToDone("Exercise 62 is correct.")
-*/
+
 
 // Exercise 63
 // Write a function definition named maxMinusMin that takes in an array of numbers and returns the difference of the maximum minus theminimum.
@@ -1284,21 +1292,25 @@ assert(longestString(["hello", "everybody"]), "everybody", "Exercise 82");
 assert(longestString(["mary", "had", "a", "little", "lamb"]), "little", "Exercise 82");
 addToDone("Exercise 82 is correct.")
 
-/*
+
 // Exercise 83
 // Write a function definition named getUniqueValues that takes in an array and returns an with only the unique values from that array.
 
 //need to practice this one
-function getUniqueValues(arr){
-    for(let i=0;i<arr.length;i++){
-
-    }
+function getUniqueValues(arr) {
+    let uniqueVal = [];
+    arr.forEach(function (str) {
+        if (uniqueVal.indexOf(str) === -1) {
+            uniqueVal.push(str);
+        }
+    });
+    return uniqueVal;
 }
 assert(getUniqueValues(["ant", "ant", "mosquito", "mosquito", "ladybug"]), ["ant", "mosquito", "ladybug"], "Exercise 83");
 assert(getUniqueValues(["b", "a", "n", "a", "n", "a", "s"]), ["b", "a", "n", "s"], "Exercise 83");
 assert(getUniqueValues(["mary", "had", "a", "little", "lamb", "little", "lamb", "little", "lamb"]), ["mary", "had", "a", "little", "lamb"], "Exercise 83");
 addToDone("Exercise 83 is correct.")
-*/
+
 
 // Exercise 84
 // Write a function definition named elementsTimesTwo that takes in an array of numbers and returns an array with each value multiplied by 2.
