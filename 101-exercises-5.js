@@ -710,7 +710,14 @@ function isOneOrTwoOrThree(x) {
 
 // Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
-
+function isVowel(string){
+    let str=string.toLowerCase();
+    if(str==="a" || str==="e" || str==="i" || str==="o" || str==="u"){
+        return true;
+    }else{
+        return false;
+    }
+}
 assert(isVowel("a"), true, "Exercise 43");
 assert(isVowel("U"), true, "Exercise 43");
 assert(isVowel("banana"), false, "Exercise 43");
@@ -721,8 +728,15 @@ addToDone("Exercise 43 is correct.")
 
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
+function hasVowels(string){
+    let str=string.toLowerCase();
+    if (str.includes("a")||str.includes("e")||str.includes("i")||str.includes("o")||str.includes("u")){
+        return true;
+    }else{
+        return false
+    }
+}
 
-//implemented regex for string.match
 assert(hasVowels("banana"), true, "Exercise 44");
 assert(hasVowels("ubuntu"), true, "Exercise 44");
 assert(hasVowels("QQQQ"), false, "Exercise 44");
@@ -732,7 +746,28 @@ addToDone("Exercise 44 is correct.")
 
 // Exercise 45
 // Write a function definition named countVowels that takes in value and returns the count of the nubmer of vowels in a sequence.
+function countVowels(string){
+    let sum=0;
+    let str=string.toLowerCase();
+    let regex=/[aeiou]/g;
+    for (let i=0;i<str.length;i++){
+        if (str[i].match(regex)){
+            sum++;
+        }
+    }
+    return sum;
+}
 
+/*function countVowels(string){
+    let counter=0;
+    let str=string.toLowerCase();
+    for(let i=0;i<str.length;i++){
+        if (str[i]==="a"||str[i]==="e"||str[i]==="i" ||str[i]==="o"||str[i]==="u"){
+            counter++;
+        }
+    }
+    return counter;
+}*/
 assert(countVowels("banana"), 3, "Exercise 45");
 assert(countVowels("ubuntu"), 3, "Exercise 45");
 assert(countVowels("mango"), 2, "Exercise 45");
