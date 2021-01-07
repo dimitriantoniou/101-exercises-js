@@ -522,6 +522,10 @@ function square(n){
     return n*n;
 }
 
+/*function square(n){
+return Math.pow(n,2);
+ */
+
 assert(square(3), 9, "Exercise 29");
 assert(square(2), 4, "Exercise 29");
 assert(square(9), 81, "Exercise 29");
@@ -550,6 +554,12 @@ function cube(n){
     return Math.pow(n,3);
 }
 
+/*
+function cube(n){
+    return n*n*n;
+}
+ */
+
 assert(cube(3), 27, "Exercise 31");
 assert(cube(2), 8, "Exercise 31");
 assert(cube(5), 125, "Exercise 31");
@@ -568,9 +578,6 @@ assert(squareRoot(4), 2.0, "Exercise 32");
 assert(squareRoot(64), 8.0, "Exercise 32");
 assert(squareRoot(81), 9.0, "Exercise 32");
 addToDone("Exercise 32 is correct.")
-
-
-
 
 // Exercise 33
 // Write a function definition named subtract that takes in two numbers and returns the first minus the second argument.
@@ -638,6 +645,12 @@ addToDone("Exercise 37 is correct.")
 function sumOfSquares(a,b){
     return Math.pow(a,2)+Math.pow(b,2);
 }
+
+/*
+function sumOfSquares(a,b){
+    return a*a+b*b;
+}
+ */
 assert(sumOfSquares(3, 2), 13, "Exercise 38");
 assert(sumOfSquares(5, 2), 29, "Exercise 38");
 assert(sumOfSquares(2, 4), 20, "Exercise 38");
@@ -650,6 +663,7 @@ addToDone("Exercise 38 is correct.")
 function timesTwoPlusThree(n){
     return n*2+3;
 }
+
 assert(timesTwoPlusThree(0), 3, "Exercise 39");
 assert(timesTwoPlusThree(1), 5, "Exercise 39");
 assert(timesTwoPlusThree(2), 7, "Exercise 39");
@@ -710,14 +724,16 @@ function isOneOrTwoOrThree(x) {
 
 // Exercise 43
 // Write a function definition named isVowel that takes in value and returns true if the value is a, e, i, o, u in upper or lower case.
-function isVowel(string){
-    let str=string.toLowerCase();
-    if(str==="a" || str==="e" || str==="i" || str==="o" || str==="u"){
+function isVowel(str){
+    let string = str.toLowerCase();
+    if (string === 'a' || string === 'e' || string === 'i' || string === 'o' || string === 'u'){
         return true;
     }else{
         return false;
     }
 }
+
+
 assert(isVowel("a"), true, "Exercise 43");
 assert(isVowel("U"), true, "Exercise 43");
 assert(isVowel("banana"), false, "Exercise 43");
@@ -736,6 +752,14 @@ function hasVowels(string){
         return false
     }
 }
+
+// function hasVowels(str){
+//     if(str.match(/[aeiou]/gi)){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
 
 assert(hasVowels("banana"), true, "Exercise 44");
 assert(hasVowels("ubuntu"), true, "Exercise 44");
