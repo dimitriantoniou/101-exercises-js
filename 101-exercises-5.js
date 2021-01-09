@@ -744,9 +744,9 @@ addToDone("Exercise 43 is correct.")
 
 // Exercise 44
 // Write a function definition named hasVowels that takes in value and returns true if the string contains any vowels.
-function hasVowels(string){
-    let str=string.toLowerCase();
-    if (str.includes("a")||str.includes("e")||str.includes("i")||str.includes("o")||str.includes("u")){
+function hasVowels(str){
+    let string=str.toLowerCase();
+    if (string.includes("a")||string.includes("e")||string.includes("i")||string.includes("o")||string.includes("u")){
         return true;
     }else{
         return false
